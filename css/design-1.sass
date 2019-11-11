@@ -1,0 +1,263 @@
+$main-green: #95ba1a
+$main-red: #e24d89
+$main-font: 'helvetica-neue-otf'
+$main-font-2: 'helcetica-neue-ttf'
+
+// ---- Startseite
+
+.dropdown-menu
+	margin: 0
+
+.green
+	color: $main-green
+
+.lila
+	color: $main-red
+
+body
+	font-size: 0.95rem
+	font-family: $main-font, arial, sans-serif
+	letter-spacing: 1px
+
+.start-text
+	h2
+		font-family: $main-font, arial, sans-serif
+
+.teaser-link
+	text-decoration: none
+	color: black
+	&:hover
+		text-decoration: none
+		color: black
+
+.blockquote
+
+	margin: 20px 0
+
+	p
+		font-size: 1.0rem
+
+.border-green
+	border-bottom: 2px solid $main-green
+
+.border-red
+	border-bottom: 2px solid $main-red
+
+.start-icons
+	width: 50px
+	height: auto
+	margin-bottom: 10px
+
+.second-teaser
+	background-image: url(../images/bg/bsp_1.jpg)
+
+	.container
+		padding: 40px 0px
+
+.para-teaser
+	background-image: url(../images/bg/bsp_2.jpg)
+	padding: 40px 0
+
+	.saison-teaser
+		background-color: rgba(255,255,255,0.95)
+		margin: 20px 60px
+		padding: 20px 60px
+
+		button.btn-default
+			border: 1px solid green
+			color: $main-red
+
+.first-teaser
+
+	.container
+		padding: 40px 0
+
+	.fa-leaf
+		font-size: 35px
+		margin-bottom: 20px
+
+.dots
+	width: 100%
+	border-bottom: 12px dotted #ad266a
+	position: absolute
+	bottom: -6px
+
+.start
+	position: relative
+
+.carousel-inner
+	margin-top: 71px
+
+.card-text
+	font-size: 1rem
+
+.customize-support
+	.carousel-inner
+		margin-top: 62px	
+
+#contact-start
+	padding: 40px 0px
+
+#contact-area
+	padding: 20px 60px
+	background-color: lightgrey
+
+
+.wpcf7
+
+	.contact_1
+		width: 33%
+		display: inline-block
+
+		input[type=text], input[type=email], textarea
+			width: 100%
+			background-color: lightgrey
+			border: 2px solid #fff
+
+	label textarea
+		border-radius: 0px
+		background-color: lightgrey
+		border: 2px solid #fff
+
+	input[type=submit]
+		border: 2px solid #fff
+		display: block
+		padding: 8px 80px
+		background-color: #fff
+		float: right
+
+		&:hover
+			background-color: lightgrey
+			cursor: pointer
+
+// ---- Footer
+
+#footerBox
+	a
+		color: #fff
+		&:hover
+			color: #fff
+	ul.menu
+		padding: 0
+		color: #fff
+		text-decoration: none
+		list-style: none
+		a
+			color: #fff
+			list-style: none
+
+// ---- Navigation
+.navbar
+	font-family: $main-font-2, arial, sans-serif
+	background-color: #ffffff!important
+	border-bottom: 1px solid rgba(0,0,0,.125)
+
+	.navbar-brand
+
+		img
+			max-width: 300px
+
+.current-menu-item
+	a
+		color: rgba(0,0,0,0.85)!important
+
+.ccaption
+	height: 100%
+	top: 0
+	background: rgba(0,0,0,0.4)
+
+.carousel-caption-inner
+	position: absolute
+	top: 38%
+	right: 0
+	left: 0
+
+.page-text-1
+	font-size: 3rem
+.page-text-2
+	font-size: 7rem
+.page-text-3
+	font-size: 1.5rem
+// ---- Footer
+
+#footerBox
+	background-color: #bebfbf
+	color: #fff
+	padding-top: 40px
+
+.pageBox
+	margin-top: 30px
+
+// ---- Unterseiten Styles
+
+.pageBox1
+	.pageRowHeadline
+		font-family: $main-font, arial, sans-serif
+
+
+
+// ---- Responsive Styles
+
+// -- Responsive | Navigation
+
+@media screen and (max-width: 410px)
+	.navbar
+		.navbar-brand
+			img
+				max-width: 200px
+
+	.carousel-inner
+		margin-top: 75px
+
+// -- Responsive | Startseite
+
+@media screen and (min-width: 992px)
+	.wpcf7
+		.contact_1
+			width: 32.9%
+
+@media screen and (max-width: 992px)
+	.wpcf7
+		.contact_1
+			width: 32.8%
+
+@media screen and (max-width: 767px)
+	.para-teaser
+		>.container
+			padding-left: 0
+			padding-right: 0
+
+			.saison-teaser
+				margin: 0 0
+	
+	.wpcf7
+		.contact_1
+			width: 32.5%
+
+@media screen and (max-width: 575px)
+	.para-teaser
+		>.container
+			.saison-teaser
+				margin: 0 20px
+				padding: 20 20px
+	
+	.wpcf7
+		.contact_1
+			width: 100%
+
+
+			
+
+
+
+// -- Responsive | Footer
+@media screen and (max-width: 768px)
+
+	.footer-logos
+		padding-right: 0
+		padding-left: 0
+		>div	
+			padding-right: 0
+
+			img
+				max-width: 100px

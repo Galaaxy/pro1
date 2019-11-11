@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ theme.link }}/css/page.min.css?ver=1.0.0">
+{% endblock %}
+
+{% block body %}
+
+
+{% block slider %}
+
+{% endblock %}
+
+<div class="pageBox">
+
+    <div class="container pageBox2">
+        <div class="row pageRowContent">
+            <div class="col-md-12">
+                
+                <div class="beitrag">
+                {% for beitrag in posts %}
+
+                    <div class="col-12 beitrag">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4 beitragImg">
+                                <img class="card-img-top" src="{{ beitrag.thumbnail.src('thumbnail-crop') | default( theme.link ~ "/images/teaser.jpg" )}}" width="100px" alt="Card image cap">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 beitragText">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ beitrag.post_title }}</h5>
+                                    <p class="card-text">{{ beitrag.post_content | truncate(40)}}</p>
+                                    <a href="{{ beitrag.guid }}" class="card-link">Weiterlesen</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                {% endfor %}
+                </div>
+                
+                <div class="tool-pagination">
+                    {% if posts.pagination.prev %}
+                        <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">Prev</a>
+                    {% endif %}
+                    <ul class="pages">
+                        {% for page in posts.pagination.pages %}
+                            <li>
+                                {% if page.link %}
+                                    <a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+                                {% else %}
+                                    <span class="{{page.class}}">{{page.title}}</span>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    {% if posts.pagination.next %}
+                        <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">Next</a>
+                    {% endif %}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

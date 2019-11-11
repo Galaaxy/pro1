@@ -1,0 +1,129 @@
+{% extends "base.html.twig" %} {% block body %}
+
+
+	{% include "slider.html.twig" %}
+
+
+	<div class="container-fluid start-text">
+		<div class="container">
+		{{ post.content }}
+		</div>
+	</div>
+	
+	<div class="container-fluid first-teaser">
+		<div class="container">
+			<div class="row d-flex justify-content-center align-items-stretch">
+
+			<div class="col-lg-4 col-12 col-sm-6 d-flex mb-3">
+
+				<div class="card text-center">
+
+					<div class="card-body">
+						<img src="{{ teaser[1].image_cropped[0] }}" alt="">
+						<h5 class="card-title text-uppercase" style="border-bottom: 2px solid {{ teaser[1].farbe }};">{{ teaser[1].name }}</h5>
+						<p class="card-text">{{ teaser[1].position }}</p>
+					</div>
+				</div>
+			</div>
+
+				<div class="col-lg-4  col-12 col-sm-6 d-flex mb-3">
+
+				<div class="card text-center">
+					<div class="card-body">
+						<img src="{{ teaser[2].image_cropped[0] }}" alt="">
+						<h5 class="card-title text-uppercase" style="border-bottom: 2px solid {{ teaser[2].farbe }};">{{ teaser[2].name }}</h5>
+						<p class="card-text">{{ teaser[2].position }}</p>
+					</div>
+				</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+<div class="container-fluid parallax second-teaser">
+	<div class="container">
+		<div class="row d-flex justify-content-center align-items-stretch">
+			<div class="col-lg-3 col-md-6 col-12 d-flex mb-3">
+				<div class="card text-center">
+					<div class="card-body">
+						<img src="{{ teaser2[1].image_cropped[0] }}" alt="">
+						<h5 class="card-title text-uppercase"  style="border-bottom: 2px solid {{ teaser2[1].farbe }};">{{ teaser2[1].name }}</h5>
+						<p class="card-text">{{ teaser2[1].position }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-12 d-flex mb-3">
+				<div class="card text-center">
+					<div class="card-body">
+						<img src="{{ teaser2[2].image_cropped[0] }}" alt="">
+						<h5 class="card-title text-uppercase" style="border-bottom: 2px solid {{ teaser2[2].farbe }};">{{ teaser2[2].name }}</h5>
+						<p class="card-text">{{ teaser2[2].position }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-12 d-flex mb-3">
+				<div class="card text-center">
+					<div class="card-body">
+						<img src="{{ teaser2[3].image_cropped[0] }}" alt="">
+						<h5 class="card-title text-uppercase" style="border-bottom: 2px solid {{ teaser2[3].farbe }};">{{ teaser2[3].name }}</h5>
+						<p class="card-text">{{ teaser2[3].position }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-12 d-flex mb-3">
+				<div class="card text-center">
+					<div class="card-body">
+						<img src="{{ teaser2[4].image_cropped[0] }}" alt="">
+						<h5 class="card-title text-uppercase" style="border-bottom: 2px solid {{ teaser2[4].farbe }};">{{ teaser2[4].name }}</h5>
+						<p class="card-text">{{ teaser2[4].position }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+                       {#} <div class="container-fluid">
+                            <div class="container">
+                                <div class="row d-flex justify-content-center align-items-stretch">
+                                    <div class="col-lg-6 col-md-6 col-12 mt-5 mb-5 p-5">
+                                        <img src="{{ theme.link }}/images/logo_2.png" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+<div class="container-fluid" id="contact-start">
+	<div class="container" id="contact-area">
+		{{ function('do_shortcode','[contact-form-7 id="50" title="Kontaktformular Standard"]') }}
+	</div>
+</div>
+
+<div class="clearfix"></div>{#}
+{#
+<div class="container-fluid parallax para-teaser">
+	<div class="container">
+		<div class="saison-teaser">
+			<blockquote class="blockquote text-center">
+				<p>auf Vorbestellung</p>
+				<h2>SAISONALE KISTE</h2>
+				<p>Mein Laden-Café - <span class="green">BIO</span><span class="lila">logisch</span> - Dein Laden-Café</p>
+				
+				<p>Wir sind ein kleines, noch sehr junges und motiviertes Unternehmen und haben uns zur Aufgabe gemacht, die Region mit ausgewählten Bioprodukten zu unterstützen. Wir vermarkten regionale und saisonale Produkte.<br><br>
+				Haben Sie Fragen? Dann kontaktieren Sie uns gern.<br><br>
+				Im BIO?logisch! biete ich Ihnen das richtige Ambiente für hochwertige Bioprodukte. Bio-Genießer können bei mir frische Backwaren, leckeren Käse, knackiges Gemüse und Obst kaufen.
+				Der passende Biowein samt Antipasti & Co ergänzen das Angebot.
+				In meinem Sortiment finden Sie eine große Auswahl an verschiedenen Lebensmitteln und Drogerieartikeln</p>
+				<button class="btn btn-default" onclick="location.href='{{ site.url }}/die-kiste'">Weiterlesen</button>
+			</blockquote>
+		</div>
+		
+	</div>
+</div>
+#}
+
+	{% endblock %}

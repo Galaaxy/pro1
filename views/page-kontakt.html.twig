@@ -1,0 +1,16 @@
+{% extends "page.html.twig" %}
+
+{% block slider %}
+    <div class="start sliderBox">
+    <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="true">
+
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img src="{{ theme.link }}/images/slider/kuchen.jpg">
+            </div>
+        </div>
+        <div class="dots"></div>
+
+    </div>
+</div>
+{% endblock %}
